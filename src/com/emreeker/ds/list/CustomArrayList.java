@@ -24,7 +24,6 @@ public class CustomArrayList <T> implements List<T> {
 		  if (element == null) {
 	            throw new NullPointerException("Element cannot be null.");
 	        }
-		  
 		  array[size++] = element;  
 	}
 
