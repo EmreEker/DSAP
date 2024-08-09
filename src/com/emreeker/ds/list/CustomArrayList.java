@@ -21,8 +21,11 @@ public class CustomArrayList <T> implements List<T> {
 
 	@Override
 	public void add(T element) {
-		// TODO Auto-generated method stub
-		
+		  if (element == null) {
+	            throw new NullPointerException("Element cannot be null.");
+	        }
+		  
+		  array[size++] = element;  
 	}
 
 	@Override
