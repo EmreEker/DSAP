@@ -18,4 +18,5 @@ public interface List<T> {
 	
 	void reCreate();
 	
+	T get(int index);
 }
