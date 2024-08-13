@@ -6,7 +6,6 @@ public class ProxyApplication {
 		DbConnector connector = new CacheProxy();
 
 		System.out.println(connector.executeSql("SELECT * FROM employee WHERE id=1"));
-
 		System.out.println(connector.executeSql("SELECT * FROM employee WHERE id=1"));
 
 	}

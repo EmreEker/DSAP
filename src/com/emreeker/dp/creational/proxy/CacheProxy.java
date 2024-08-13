@@ -18,5 +18,4 @@ public class CacheProxy implements DbConnector {
 	            return result;
 	        }
 	}
-
 }
