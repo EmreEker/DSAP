@@ -55,14 +55,12 @@ public class CustomArrayList<T> implements List<T> {
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+	return size;
 	}
 
 	@Override
 	public boolean isFull() {
-		// TODO Auto-generated method stub
-		return false;
+		return size == array.length;
 	}
 
 	@Override
