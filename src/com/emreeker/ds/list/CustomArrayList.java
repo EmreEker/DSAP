@@ -49,13 +49,18 @@ public class CustomArrayList<T> implements List<T> {
 
 	@Override
 	public void remove(int index) {
-		// TODO Auto-generated method stub
-
+		if (index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+		}
+		for (int i = index; i < size - 1; i++) {
+			array[i] = array[i + 1];
+		}
+		array[--size] = null;
 	}
 
 	@Override
 	public int size() {
-	return size;
+		return size;
 	}
 
 	@Override
@@ -65,14 +70,15 @@ public class CustomArrayList<T> implements List<T> {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return size == 0;
 	}
 
 	@Override
 	public void reCreate() {
-		// TODO Auto-generated method stub
-
+		@SuppressWarnings("unchecked")
+		T[] newArray = (T[]) new Object[array.length * 2];
+		System.arraycopy(array, 0, newArray, 0, size);
+		array = newArray;
 	}
 
 	@Override
