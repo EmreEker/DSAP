@@ -28,4 +28,20 @@ public class DoublyLinkedList<T> {
 		newNode.previous = last;
 		last = newNode;
 	}
+
+	void insertMiddle(DoubleNode<T> newNode, DoubleNode<T> previous) {
+
+	}
+
+	void deleteFirst() {
+
+	}
+
+	void deleteMiddle(DoubleNode<T> node) {
+		
+	}
+
+	void deleteLast() {
+
+	}
 }
