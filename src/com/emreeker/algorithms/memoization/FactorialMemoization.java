@@ -18,16 +18,13 @@ public class FactorialMemoization {
         if (n <= 1) {
             return 1;
         }
-
        
         if (memoizationMap.containsKey(n)) {
             return memoizationMap.get(n);
         }
-
        
         long result = n * factorial(n - 1);
         memoizationMap.put(n, result);
-
         return result;
     }
 }
